@@ -10,6 +10,13 @@ export const TodoList = () => {
     if (loading) return <p>Loading...</p>;
     if (error) return <p>{error}</p>;
 
+    if (loading) return <p>Loading todos...</p>;
+    if (error) return <p style={{ color: "red" }}>{error}</p>;
+
+    if (!loading && todos.length === 0) {
+        return <p>No todos yet</p>;
+    }
+
     return (
         <ul>
             {todos.map((todo) => (
