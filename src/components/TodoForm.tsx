@@ -1,7 +1,7 @@
 import { useState, useContext } from "react";
 import { TodoContext } from "../context/TodoContext";
 
-export const TodoFrom = () => {
+export const TodoForm = () => {
     const [title, setTitle] = useState("");
     const context = useContext(TodoContext);
 
